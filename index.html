@@ -1,3 +1,4 @@
+<!DOCTYPE HTML>
 <!--
 This HTML5 website is part of a HTML5 / CSS3 tutorial created by Christoph Anastasiades (http://www.lingulo.com)
 Feel free to use it for your personal or commercial projects and/or change it in any way you like.
@@ -17,26 +18,52 @@ What you need to do to make this page work:
 To minimize the amount of HTTP requests combine all CSS files into one single file.
 
 !-->
-<!DOCTYPE HTML>
 <html>
     <head>
         <meta charset="UTF-8">
+        <!-- alle Geraete, alle Bildschirmaufloesungen; device-width (Geraetebreite), initial scale (Anfangs-Zoom)
+        -> Webseite 1:1 angezeigt -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <title>Some Page Title</title>
+        
+        <!-- vergleich reset vs normalize -->
         <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" />
+        <!-- <link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen" /> -->
+        
         <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+        
+        <!-- um Bilder bei klick zu vergroessern, braucht jQuery -->
         <link href="lightbox/css/lightbox.css" rel="stylesheet" />
+        
+        <!-- Benutzung der Schriftarten Open Sans und Baumans -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans|Baumans' rel='stylesheet' type='text/css'>
         
+        <!-- fix initial scale for ios -->
+        <script src="js/vendor/ios-orientationchange-fix.js"></script>
+        
+        <!-- Feature-Erkennungs-Bibliothek für HTML5 und CSS3. Mithilfe dieses Skripts lässt sich auf einfache Weise
+        feststellen, ob ein Browser ein bestimmtes Feature unterstützt oder nicht. Außerdem beinhaltet das Skript
+        auch gleich html5shiv, das die Benutzung von HTML5-Elementen im Internet Explorer ermöglicht. -->
         <script src="js/vendor/modernizr.min.js"></script>
+        
+        <!-- responsive Design im Internet Explorer und in anderen Browsern, die keine CSS Media Queries unterstützen -->
+        <!-- gestalterisches und technisches Paradigma zur Erstellung von Websites, so dass diese auf Eigenschaften des
+        jeweils benutzten Endgeräts, vor allem Smartphones und Tabletcomputer, reagieren können.
+        Der grafische Aufbau einer „responsiven“ Website erfolgt anhand der Anforderungen des jeweiligen Gerätes -->
         <script src="js/vendor/respond.min.js"></script>
         
         <!-- include extern jQuery file but fall back to local file if extern one fails to load !-->
         <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-        <script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="js\/vendor\/1.7.2.jquery.min"><\/script>')</script>
+        <script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="js\/vendor\/1.7.2.jquery.min"><\/script>');</script>
         
         <script src="lightbox/js/lightbox.js"></script>
+        
+        <!-- Wir werden in diesem Tutorial einige CSS3-Features nutzen, die es erfordern, unterschiedliche Prefixe für
+        die browserunabhängige Darstellung von Eigenschaften zu verwenden. Um nicht bei jeder Eigenschaft manuell alle
+        Prefixe angeben zu müssen -->
         <script src="js/vendor/prefixfree.min.js"></script>
+        <!-- responsive Image-Slider -->
         <script src="js/vendor/jquery.slides.min.js"></script>
         <script src="js/script.js"></script>
         
